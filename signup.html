@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+    <style>
+        #jb-container {
+            width: 400px;
+            margin: 0px auto;
+            padding: 20px;
+            border: 1px solid #4b5dad;
+        }
+
+        h1 {
+            padding: 15px 0px;
+            text-align: center;
+            font-size: 30px;
+            color: rgb(20, 135, 235);
+        }
+
+        .button {
+            background-color: #5e5e5e;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 5px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .select {
+
+            margin: 0px auto;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="jb-container">
+
+        <div id="jb-header">
+            <h1>회원가입</h1>
+        </div>
+
+        <div class="jb-content">
+            <center>
+                <div class="jb-con">
+                    <table>
+
+                        <tr>
+                            <td>아이디</td>
+                            <td><input type="text" placeholder="아이디를 입력하세요" id="id" name="id" required="" /></td>
+                        </tr>
+                        <tr>
+                            <td>비밀번호</td>
+                            <td><input type="password" placeholder="비밀번호를 입력하세요" id="password" name="password"
+                                    required="" /></td>
+                        </tr>
+                        <tr>
+                            <td>이름</td>
+                            <td><input type="text" placeholder="이름을 입력하세요" id="name" name="name" required="" /></td>
+                        </tr>
+                        <tr>
+                            <td>전화번호</td>
+                            <td><input type="text" placeholder="전화번호를 입력하세요" id="phoneNumber" name="phoneNumber"
+                                    required="" /></td>
+                        </tr>
+                        <tr>
+                            <td>차량 모델</td>
+                            <td><input type="text" placeholder="차량 모델을 입력하세요" id="carModel" name="carModel"
+                                    required="" /></td>
+                        </tr>
+                        <tr>
+                            <td>차량 번호</td>
+                            <td><input type="text" placeholder="차량 번호를 입력하세요" id="carNumber" name="carNumber"
+                                    required="" /></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </center>
+            <div class="select">
+                <input type="submit" class="button" id="submit" value="가입완료" />
+                <a href="main.html" class="button">취소</a>
+            </div>
+        </div>
+    </div>
+
+    <!--JAVASCRIPT START-->
+    <!--회원가입시 유효성 검사 필요!! 지금은 다 통과되는 상태-->
+    <script>
+        //JS
+        document.getElementById('submit').onclick = function () {
+            var id = document.getElementById('id').value;
+            var password = document.getElementById('password').value;
+            var name = document.getElementById('name').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            var carModel = document.getElementById('carModel').value;
+            var carNumber = document.getElementById('carNumber').value;
+
+            alert("회원가입되었습니다.!");
+            location.href = "parkingLot.html";
+
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>주차관리시스템 메인</title>
+    <style>
+        #jb-container {
+            width: 940px;
+            margin: 0px auto;
+            padding: 20px;
+
+        }
+
+        #jb-header {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #4b5dad;
+            background: rgb(46, 117, 182);
+        }
+
+        .jb-content {
+            width: 500px;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin: 0 auto;
+            border: 0px solid #bcbcbc;
+        }
+
+        .jb-con {
+            width: 170px;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin: 0 auto;
+            border: 1px solid #bcbcbc;
+        }
+
+        h1 {
+            padding: 25px 0px;
+            text-align: center;
+            font-size: 65px;
+            color: aliceblue;
+        }
+
+        .button {
+            background-color: #5e5e5e;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 5px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="jb-container">
+
+        <div id="jb-header">
+            <h1>주차관리 시스템</h1>
+        </div>
+
+        <div class="jb-content">
+            <center>
+                <div class="jb-con">
+                    <div>
+                        <input type="text" name="id" id="id_" placeholder="아이디" />
+                    </div>
+                    <div>
+                        <input type="text" name="password" id="pass_" placeholder="비밀번호" />
+                    </div>
+                    <div>
+                        <button id="submit" class="button">로그인</button>
+                        <a href="signup.html" class="button">회원가입</a> </div>
+
+                </div>
+        </div>
+        </center>
+    </div>
+
+    </div>
+
+    <!--JAVASCRIPT START-->
+    <!---json으로 부터 id와 password 데이터를 받아서 일치하면 로그인할 수 있도록 하는 내용 추가하기-->
+    <script>
+        //JS
+        
+        document.getElementById('submit').onclick = function () {
+            var ID = document.getElementById('id_').value;
+            var pass = document.getElementById('pass_').value;
+
+            let requestURL = 'logInfo.json';
+            
+            let request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'json';
+            request.send();
+     
+            request.onload = function () {
+                const logInfo = request.response;
+                logInGo(logInfo);
+            }
+        }
+        function logInGo(obj) {
+            const member = obj['members'];
+
+            for(let i=0; i<member.length; i++){
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>parkingLot</title>
+        <style>
+            .btn-group button {
+                width: 160px;
+                height: 250px;
+                background-color: #B2D6DB;
+                font-size: 30px;
+                font-color : black;
+            }
+            .btn-group button:hover{
+                font-color : black;
+                background-color: #366F12;
+            }
+            .btn-group2 button {
+                width: 70px;
+                height: 40px;
+                margin-left: 5px;
+                margin-top: 35px;
+                border :2px solid black;                
+            }       
+            i2{
+               position: absolute;
+               left: 1100px;
+               top: 35px;                           
+           }
+           box{
+            width: 210px;
+            height: 100px; 
+            padding: 50px;
+            border : 5px solid #4A4C51; 
+            position : absolute;
+            text-align: center;
+            font-size: 18px;
+            left: 850px;
+            top : 450px; 
+           }
+
+           p.indent{padding-bottom: 3.5cm;}
+        </style>
+
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    
+    </head>
+    <body>
+        <i2> <i class= "fas fa-user-edit fa-3x "> </i></i2>
+        <div class = "btn-group">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button> 
+        </div>
+
+       
+        <p class="indent"></p>
+        <box>
+            선택하신 공간에 <br>주차하시겠습니까?</br>
+            <div class = "btn-group2">
+                
+            <button style="background-color: #7C986B;" id="submit"><b>확인</b></button>
+            <button style="background-color: #C85B3A;"><b>취소</b></button>
+             </div>
+            
+        </box>
+        <div class = "btn-group">
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>10</button>
+        </div>    
+
+       
+           <!--JAVASCRIPT START-->
+    <script> //JS
+        document.getElementById('submit').onclick = function() {
+                location.href = "out.html";
+        }
+    </script>
+    </body>
+  
+
+</html>

@@ -1,0 +1,32 @@
+{
+    "appname" : "ParkingLotProgram",
+    "members" : [
+      {
+        "name" : "kim",
+        "phoneNumber" : "01012341234",
+        "id" : "kim123",
+        "password" : "123",
+        "carModel" : "sonata",
+        "carNumber" : "1641",
+        "parkingFee" : ""
+      },
+      {
+        "name" : "jang",
+        "phoneNumber" : "01056785678",
+        "id" : "jang456",
+        "password" : "456",
+        "carModel" : "grandeur",
+        "carNumber" : "4095",
+        "parkingFee" : ""
+      },
+      {
+        "name" : "oh",
+        "phoneNumber" : "01098769876",
+        "id" : "oh789",
+        "password" : "789",
+        "carModel" : "mini_coupe",
+        "carNumber" : "7563",
+        "parkingFee" : ""
+      }
+    ]
+  }
